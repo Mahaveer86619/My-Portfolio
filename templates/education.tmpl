@@ -1,0 +1,17 @@
+{{ template "base" . }}
+
+{{ define "content" }}
+<div class="container mx-auto p-4">
+  <h1 class="text-3xl font-bold mb-6">Education</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {{ range .Education }}
+    <div class="bg-white rounded-2xl shadow-lg p-4">
+      <h2 class="text-xl font-semibold">{{ .Degree }}</h2>
+      <p class="text-gray-600">{{ .Institution }}</p>
+      <p class="text-sm text-gray-500">{{ .Dates }}</p>
+      <p class="text-sm text-gray-500">{{ .Location }}</p>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

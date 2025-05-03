@@ -1,0 +1,27 @@
+{{ template "base" . }}
+
+{{ define "content" }}
+<div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-6">Experience</h1>
+    <div class="relative">
+        <div class="absolute left-1/2 -ml-px h-full bg-gray-300" style="width: 2px;"></div>
+        {{ range .Experience }}
+        <div class="mb-8 flex justify-between items-center w-full">
+            <div class="order-1 w-5/12"></div>
+            <div class="z-20 flex items-center order-1 bg-gray-800 shadow-xl w-8 h-8 rounded-full">
+                <h1 class="mx-auto font-semibold text-lg text-white">{{ .StartDate }} - {{ .EndDate }}</h1>
+            </div>
+            <div class="order-1 bg-gray-400 rounded-lg shadow-xl w-5/12 px-6 py-4">
+                <h3 class="mb-3 font-bold text-gray-800 text-xl">{{ .Title }}</h3>
+                <h4 class="mb-3 font-medium text-gray-700">{{.Company}}</h4>
+                <ul class="list-disc list-inside text-gray-600">
+                    {{ range .Achievements }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

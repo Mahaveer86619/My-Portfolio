@@ -1,0 +1,39 @@
+{{ define "content" }}
+<body class="bg-gray-100 font-sans transition-all duration-800 ease-out">
+  <div class="fixed inset-0 flex items-center justify-center bg-cover bg-center transition-all duration-800 ease-out bg-zoomed-out" style="background-image: url('/static/img/background.jpg');">
+    <img src="/static/img/profile.jpg" alt="Profile Picture" class="w-52 h-52 rounded-full shadow-lg transition duration-500 ease-in-out" />
+  </div>
+  <div class="grid grid-cols-3 grid-rows-2 gap-4 p-4 h-screen items-center justify-center">
+    <div class="widget rounded-2xl shadow-lg p-4 -translate-x-full" hx-trigger="load delay:1500ms" hx-add-class="slide-in">
+      <a href="/projects" class="block">
+        <i class="fas fa-folder text-4xl mb-2"></i>
+        <h3 class="text-xl font-semibold">Projects</h3>
+      </a>
+    </div>
+    <div class="widget rounded-2xl shadow-lg p-4 -translate-y-full" hx-trigger="load delay:1500ms" hx-add-class="slide-in">
+      <a href="/experience" class="block">
+        <i class="fas fa-briefcase text-4xl mb-2"></i>
+        <h3 class="text-xl font-semibold">Experience</h3>
+      </a>
+    </div>
+    <div class="widget rounded-2xl shadow-lg p-4 translate-x-full" hx-trigger="load delay:1500ms" hx-add-class="slide-in">
+      <a href="/education" class="block">
+        <i class="fas fa-graduation-cap text-4xl mb-2"></i>
+        <h3 class="text-xl font-semibold">Education</h3>
+      </a>
+    </div>
+    <div class="widget rounded-2xl shadow-lg p-4 translate-y-full" hx-trigger="load delay:1500ms" hx-add-class="slide-in">
+      <a href="/skills" class="block">
+        <i class="fas fa-code text-4xl mb-2"></i>
+        <h3 class="text-xl font-semibold">Skills</h3>
+      </a>
+    </div>
+    <div class="widget rounded-2xl shadow-lg p-4 -translate-x-full" hx-trigger="load delay:1500ms" hx-add-class="slide-in">
+      <a href="/contacts" class="block">
+        <i class="fas fa-envelope text-4xl mb-2"></i>
+        <h3 class="text-xl font-semibold">Contacts</h3>
+      </a>
+    </div>
+  </div>
+</body>
+{{ end }}
