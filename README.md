@@ -8,8 +8,8 @@ This project is a one-page animated portfolio website designed to showcase profe
 *   **Animated Intro:** Features a full-screen background with a circular profile picture and a engaging load animation.
 *   **Responsive Design:** Built with Tailwind CSS, ensuring a seamless experience across various devices.
 *   **Interactive Elements:** Uses htmx to provide a smooth and interactive experience.
-*   **API Support:** Includes a RESTful API endpoint to serve resume data in JSON format.
-*	**Modular Design:** Each section (projects, experience, education, skills, contacts) is a dedicated route with it's own design.
+*   **API Support:** Includes RESTful API endpoints to manage resume data.
+*   **Modular Design:** Each section (projects, experience, education, skills, contacts) is a dedicated route with its own design.
 
 ## Technology Stack
 The portfolio is built with:
@@ -19,21 +19,28 @@ The portfolio is built with:
 -   **MongoDB:** For storing and retrieving resume data.
 -   **htmx:** For dynamic behaviors and animations.
 
-The application provides a resume API endpoint and several HTML routes.
+## Routes
+The application provides both web page routes and API routes.
 
-### Available Routes
+### Web Page Routes
 
--   `/`: Landing page with animated intro.
--   `/api/resume`: JSON data for resume.
--   `/projects`: List of projects.
--   `/experience`: Professional experience timeline.
--   `/education`: Education details.
--   `/skills`: Skills grid.
--   `/contacts`: Contact information.
+These routes serve the HTML content for the website:
 
-### Resume Data Format
+-   `/`: Landing page with animated introduction.
+-   `/projects`: Displays the list of projects.
+-   `/experience`: Displays the professional experience timeline.
+-   `/education`: Displays education details.
+-   `/skills`: Displays the skills grid.
+-   `/contacts`: Displays contact information.
 
-The resume data is stored in MongoDB and served as JSON from the `/api/resume` endpoint. The structure is defined in the `resume.go` file.
+### API Routes
+
+These routes are used for interacting with the resume data:
+
+-   `GET /api/resume`: Retrieves the complete resume data in JSON format.
+-   `POST /api/profile`: Creates or updates the profile information.
+    -   **Request Body (JSON):**
+
 
 ## Prerequisites
 Before you begin, ensure you have the following installed on your system:
